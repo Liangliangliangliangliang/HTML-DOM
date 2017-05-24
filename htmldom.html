@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>新建网页</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="布尔教育 http://www.itbool.com" />
+</head>
+    <body>
+    	<!--cookie domain 属性-->
+    	<script>
+    		document.write(document.cookie+'<br />')
+    		document.write(document.cookie)    	
+    	</script>
+		<!-- 方法 -->
+		getElementById()
+		getElementsByName()
+		getElementByTagName()
+
+		<!-- DOM属性 -->
+		attr.isId  属性是id返回true
+		attr.name   属性名称
+		attr.value  属性值
+		<p id="demo">请点击按钮来获得 button 元素的首个属性值：</p>
+
+		<button onclick="myFunction()">试一下</button>
+
+		<script>
+		function myFunction()
+		{
+		var btn=document.getElementsByTagName("BUTTON")[0];
+		var x=document.getElementById("demo");
+		x.innerHTML=btn.attributes[0].value;
+		}
+		</script>
+		<!--DOM event -->
+	    <br />
+	    enter your name:<input id='frame' type='text'   onkeyup='touppercase(this.id)'>
+		<script>
+			function touppercase(x){
+				var y=document.getElementById(x).value
+				document.getElementById(x).value=y.toUpperCase()
+			}
+		</script>
+		
+    </body>
+</html>
